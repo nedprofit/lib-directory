@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.2"
@@ -42,7 +42,7 @@ gem "image_processing", "~> 1.2"
 # Бэкенд
 gem 'devise' # Flexible authentication solution for Rails with Warden [https://github.com/heartcombo/devise]
 gem 'wicked' # Use wicked to turn your controller into a wizard [https://github.com/zombocom/wicked]
-
+gem 'rails-i18n', '~> 7.0.0' # Поддержка i18n
 # Фронтенд
 gem 'simple_form' # Удобный конструктор создания формы
 gem "importmap-rails" # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]

@@ -1,6 +1,13 @@
 class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_locale
+
+  private
+
+  def set_locale
+    I18n.locale = :ru
+  end
 
   protected
 
