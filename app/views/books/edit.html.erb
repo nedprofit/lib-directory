@@ -1,0 +1,4 @@
+<%= turbo_frame_tag "description" do %>
+  <p class="text mt-8 text-left	"> <%= @book.description.upcase %> </p>
+  <%= link_to 'Обратно', book_path(@book) %>
+<% end %>

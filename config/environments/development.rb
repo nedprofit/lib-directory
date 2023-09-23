@@ -1,6 +1,10 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+  config.active_storage.service = :local
+
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded any time
@@ -16,7 +20,7 @@ Rails.application.configure do
 
   # Enable server timing
   config.server_timing = true
-
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join("tmp/caching-dev.txt").exist?

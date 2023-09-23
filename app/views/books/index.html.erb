@@ -1,0 +1,29 @@
+<!-- Remove py-8 -->
+<div class="mx-auto container py-8">
+  <div class="flex flex-wrap">
+    <!-- Card 1 -->
+    <% @books.each do |book| %>
+      <div tabindex="0" class="focus:outline-none mx-2 w-40 xl:mb-0 mb-4">
+        <%= link_to book_path(book) do %>
+          <div>
+            <img alt="person capturing an image" src="https://s1.livelib.ru/boocover/1000453410/o/6118/Dzhon_R._R._Tolkien__Vozvraschenie_gosudarya.jpeg" tabindex="0" class="focus:outline-none h-30 w-40"/>
+          </div>
+          <div class="bg-white dark:bg-gray-800">
+            <div class="p-1">
+              <div class="flex items-center">
+                <h2 tabindex="0" class="focus:outline-none text-base dark:text-white font-semibold">
+                  <%= book.title.first(15) %>
+                </h2>
+              </div>
+              <div class="flex items-center justify-between">
+                <h2 tabindex="0" class="focus:outline-none text-indigo-700 text-xs font-semibold">
+                  <%= link_to book.author(book.author_id), author_path(book.author_id) %>
+                </h2>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
