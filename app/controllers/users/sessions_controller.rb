@@ -4,9 +4,11 @@ class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
-  # def new
-  #   super
-  # end
+  def new
+    super do |resource|
+      turbo_stream.prepend "flash", partial: "layouts/flash", locals: { type: :alert, message: flash[:error] } if flash[:error].present?
+    end
+  end
 
   # POST /resource/sign_in
   # def create

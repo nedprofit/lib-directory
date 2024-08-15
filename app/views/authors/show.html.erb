@@ -1,6 +1,3 @@
-<div>123</div>
+<%= @author.name %>
 
-<%= turbo_frame_tag "description" do %>
-  <% link_to testing_path(@author)	 %>
-<% end %>
-
+<p><%= @author.description %></p>

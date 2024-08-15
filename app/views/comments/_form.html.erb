@@ -1,9 +1,22 @@
 <div class="flex mx-auto shadow-lg mt-5 mb-4 w-full">
-  <%= form_with(model: comment, class: 'w-full max-w-full bg-white rounded-lg px-4 pt-2') do |form| %>
+  <%= form_with(model: [@book, @book.comments.build], class: 'w-full max-w-full bg-white rounded-lg px-4 pt-2') do |form| %>
     <div class="flex flex-wrap -mx-3 mb-6">
       <h2 class="px-4 pt-3 pb-2 text-gray-800 text-lg">Добавить новый комментарий</h2>
-      <div class="w-full px-3 mb-2 mt-2">
-        <%= form.text_area :text, class: 'bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white' %>
+      <script type="module">
+          import { Editor } from 'https://esm.sh/@tiptap/core'
+          import StarterKit from 'https://esm.sh/@tiptap/starter-kit'
+          const editor = new Editor({
+              element: document.querySelector('.element'),
+              extensions: [StarterKit],
+              content: '<p>Hello World!</p>',
+          })
+      </script>
+      <div data-controller="tiptap" class="w-full px-3 mb-2 mt-2">
+        <div class="element bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white" data-tiptap-target="editor">
+        </div>
+
+
+        <%#= form.text_area :text, class: "element bg-gray-100 rounded border border-gray-400 leading-normal resize-none w-full h-20 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white", data: { "tiptap-target": "editor" } %>
       </div>
       <div class="w-full flex items-start px-3">
         <div class="flex items-start w-1/2 text-gray-700 px-2 mr-auto">
@@ -16,18 +29,6 @@
           <%= form.submit 'Отправить', class: 'bg-white text-gray-700 font-medium py-1 px-4 border border-gray-400 rounded-lg tracking-wide mr-1 hover:bg-gray-100' %>
         </div>
       </div>
-      <% if comment.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:
-          </h2>
-
-          <ul>
-            <% comment.errors.each do |error| %>
-              <li><%= error.full_message %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
 
       <%= form.hidden_field :book_id %>
   <% end %>

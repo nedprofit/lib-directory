@@ -1,12 +1,19 @@
-<!-- Remove py-8 -->
 <div class="mx-auto container py-8">
   <div class="flex flex-wrap">
-    <!-- Card 1 -->
+    <%= link_to 'Добавить новую книгу', new_book_path, class: "focus:outline-none mb-4" %>
     <% @books.each do |book| %>
       <div tabindex="0" class="focus:outline-none mx-2 w-40 xl:mb-0 mb-4">
         <%= link_to book_path(book) do %>
           <div>
-            <img alt="person capturing an image" src="https://s1.livelib.ru/boocover/1000453410/o/6118/Dzhon_R._R._Tolkien__Vozvraschenie_gosudarya.jpeg" tabindex="0" class="focus:outline-none h-30 w-40"/>
+            <% if book.poster.present? %>
+              <%= image_tag book.poster, class: "focus:outline-none object-cover h-60 w-40" %>
+            <% else %>
+              <div class="flex justify-center items-center bg-gray-100 h-60 w-40">
+                <div class="flex items-center justify-center w-full h-full bg-blue-500 text-white text-6xl font-bold rounded-lg">
+                  <%= book.title[0].upcase %>
+                </div>
+              </div>
+            <% end %>
           </div>
           <div class="bg-white dark:bg-gray-800">
             <div class="p-1">
@@ -17,7 +24,7 @@
               </div>
               <div class="flex items-center justify-between">
                 <h2 tabindex="0" class="focus:outline-none text-indigo-700 text-xs font-semibold">
-                  <%= link_to book.author(book.author_id), author_path(book.author_id) %>
+                  <%= link_to book.author.name, author_path(book.author) %>
                 </h2>
               </div>
             </div>
