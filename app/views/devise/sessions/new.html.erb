@@ -17,40 +17,15 @@
     </div>
 
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'w-full max-w-sm' }) do |f| %>
-      <div class="mb-6">
-        <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">
-          <%= t :label_email_address %>
-        </label>
-        <%= f.input_field :email,
-                          required: false,
-                          autocomplete: "email",
-                          autofocus: true,
-                          class: "mt-2 appearance-none text-slate-900 bg-white rounded-md block w-full px-3 h-10 shadow-sm sm:text-sm focus:outline-none placeholder:text-slate-400 focus:ring-2 focus:ring-sky-500 ring-1 ring-slate-200" %>
-      </div>
-      <div class="mb-6">
-        <label for="password" class="block text-sm font-semibold leading-6 text-gray-900">
-          <%= t :label_password %>
-        </label>
-        <%= f.input_field :password,
-                          required: false,
-                          label: false,
-                          autocomplete: "current-password",
-                          class: "mt-2 appearance-none text-slate-900 bg-white rounded-md block w-full px-3 h-10 shadow-sm sm:text-sm focus:outline-none placeholder:text-slate-400 focus:ring-2 focus:ring-sky-500 ring-1 ring-slate-200" %>
-      </div>
+      <%= f.input :email %>
+      <%= f.input :password %>
+
       <div class="flex items-center justify-between mb-6">
         <div class="flex items-center">
-          <%= f.input_field :remember_me, as: :boolean,
-                            class: "block text-sm leading-6 text-gray-900",
-                            input_html: { class: "mr-3 h-4 w-4 rounded border-gray-300 text-gray-900 focus:text-gray-900" } if devise_mapping.rememberable?
-          %>
-          <label for="remember-me" class="ml-3 block text-sm leading-6 text-gray-900">
-            <%= t :label_remember_me %>
-          </label>
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
         </div>
-
-
         <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-          <div class="text-sm leading-6">
+          <div class="text-sm mb-3 leading-6">
             <%= link_to (t :label_forgot_password), new_password_path(resource_name), class: "font-semibold text-indigo-600 hover:text-indigo-500" %>
           </div>
         <% end %>
