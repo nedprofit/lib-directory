@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CommentsController < ApplicationController
   before_action :set_book
 
@@ -6,9 +8,9 @@ class CommentsController < ApplicationController
     @comment.user = current_user
 
     if @comment.save
-      redirect_to @book, notice: 'Комментарий был успешно добавлен.'
+      redirect_to @book, notice: "Комментарий был успешно добавлен."
     else
-      error_message = @comment.errors.full_messages.join(', ')
+      error_message = @comment.errors.full_messages.join(", ")
       redirect_to @book, alert: "Ошибка при добавлении комментария: #{error_message}"
     end
   end

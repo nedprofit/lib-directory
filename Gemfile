@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source "http://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -28,7 +30,7 @@ gem "redis"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -40,33 +42,36 @@ gem "sassc-rails"
 gem "image_processing"
 
 # Бэкенд
-gem 'devise' # Flexible authentication solution for Rails with Warden [https://github.com/heartcombo/devise]
-gem 'wicked' # Use wicked to turn your controller into a wizard [https://github.com/zombocom/wicked]
-gem 'rails-i18n' # Поддержка i18n
+gem "devise" # Flexible authentication solution for Rails with Warden [https://github.com/heartcombo/devise]
+gem "rails-i18n" # Поддержка i18n
+gem "wicked" # Use wicked to turn your controller into a wizard [https://github.com/zombocom/wicked]
 
 # Фронтенд
-gem 'simple_form' # Удобный конструктор создания формы
-gem 'simple_form-tailwind'
+gem "simple_form" # Удобный конструктор создания формы
+gem "simple_form-tailwind"
 
-gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+gem "inline_svg" # Embed SVG documents in your Rails views and style them with CSS [https://github.com/jamesmartin/inline_svg]
+gem "jsbundling-rails"
 gem "stimulus-rails" # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "tailwindcss-rails" # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
-gem "inline_svg" # Embed SVG documents in your Rails views and style them with CSS [https://github.com/jamesmartin/inline_svg]
+gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "view_component" # Build reusable, testable & encapsulable UI components from Ruby classes [https://github.com/viewcomponent/view_component]
-gem "jsbundling-rails"
 
- group :development, :test do
+group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
-  gem "lookbook", ">= 2.1.1"
-  gem "listen"
   gem "actioncable"
-end 
+  gem "debug", platforms: %i[mri mingw x64_mingw]
+  gem "listen"
+  gem "lookbook", ">= 2.1.1"
+end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
 
+  gem "rubocop"
+  gem "rubocop-performance"
+  gem "rubocop-rails"
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
 
@@ -79,4 +84,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-

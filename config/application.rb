@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "boot"
 
 require "rails/all"
@@ -11,7 +13,7 @@ module LibDirectory
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    config.i18n.available_locales = [:ru, :en]
+    config.i18n.available_locales = %i[ru en]
     config.i18n.default_locale = :ru
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do

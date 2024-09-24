@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class AuthorsController < ApplicationController
-  before_action :set_author, only: [:show, :edit, :update, :destroy]
+  before_action :set_author, only: %i[show edit update destroy]
 
   def index
     @authors = Author.all
@@ -18,7 +20,7 @@ class AuthorsController < ApplicationController
 
     respond_to do |format|
       if @author.save
-        format.html { redirect_to @author, notice: 'Книга была успешно создана.' }
+        format.html { redirect_to @author, notice: "Книга была успешно создана." }
         format.json { render :show, status: :created, location: @author }
       else
         format.html { render :new, status: :unprocessable_entity }

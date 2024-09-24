@@ -1,12 +1,12 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: %i[show edit update]
   before_action :authenticate_user!
 
-  def show
-  end
+  def show; end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @user.update(user_params)
@@ -26,9 +26,9 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(current_user.id)
     if @user.destroy
-      redirect_to root_path, notice: 'Ваш аккаунт успешно удален.'
+      redirect_to root_path, notice: "Ваш аккаунт успешно удален."
     else
-      redirect_to settings_account_path, alert: 'Произошла ошибка при удалении аккаунта.'
+      redirect_to settings_account_path, alert: "Произошла ошибка при удалении аккаунта."
     end
   end
 

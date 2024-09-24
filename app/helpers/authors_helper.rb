@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AuthorsHelper
   def index
     @authors = Author.all
@@ -7,7 +9,5 @@ module AuthorsHelper
     @author = Author.find(params[:id])
   end
 
-  def new
-
-  end
+  def new; end
 end
