@@ -40,7 +40,6 @@
     <orderEntry type="library" scope="PROVIDED" name="ast (v2.4.2, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="base64 (v0.2.0, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.20, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="better_html (v2.1.1, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bigdecimal (v3.1.8, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bindex (v0.8.1, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootsnap (v1.18.4, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
@@ -55,7 +54,6 @@
     <orderEntry type="library" scope="PROVIDED" name="debug (v1.9.2, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="devise (v4.9.4, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="drb (v2.2.1, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="erb_lint (v0.6.0, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubi (v1.13.0, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.17.0, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="globalid (v1.2.1, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
@@ -136,7 +134,6 @@
     <orderEntry type="library" scope="PROVIDED" name="selenium-webdriver (v4.25.0, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simple_form (v5.3.1, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="simple_form-tailwind (v0.1.1, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="smart_properties (v1.17.0, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v4.2.1, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v3.5.2, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="stimulus-rails (v1.3.4, Remote-rbenv: ruby-3.3.5-p100) [gem]" level="application" />
