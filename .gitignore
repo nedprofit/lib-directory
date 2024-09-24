@@ -7,6 +7,10 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore all environment files (except templates).
+/.env*
+!/.env*.erb
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -18,7 +22,7 @@
 !/tmp/pids/
 !/tmp/pids/.keep
 
-# Ignore uploaded files in development.
+# Ignore storage (uploaded files in development and any SQLite databases).
 /storage/*
 !/storage/.keep
 /tmp/storage/*
@@ -34,3 +38,26 @@
 !/app/assets/builds/.keep
 
 /node_modules
+
+# Editor and IDE settings
+.gitlab.nvim
+.idea
+tags
+
+# Ignore DB settings
+config/database.yml
+
+.env
+
+# Ignore temporary files
+*~
+
+# Ingore coverage
+/coverage
+
+Dockerfile.dev
+Dockerfile.postgres.dev
+docker-compose.dev.yml
+Procfile.docker.dev
+docker-compose.dev.yml
+Dockerfile.dev
