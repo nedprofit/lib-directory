@@ -1,10 +1,10 @@
 source "http://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.3.0"
+ruby "3.3.5"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.2"
+gem "rails", "~> 7.2"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -43,6 +43,7 @@ gem "image_processing", "~> 1.2"
 gem 'devise' # Flexible authentication solution for Rails with Warden [https://github.com/heartcombo/devise]
 gem 'wicked' # Use wicked to turn your controller into a wizard [https://github.com/zombocom/wicked]
 gem 'rails-i18n', '~> 7.0.0' # Поддержка i18n
+
 # Фронтенд
 gem 'simple_form' # Удобный конструктор создания формы
 gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
