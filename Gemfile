@@ -10,16 +10,16 @@ gem "rails", "~> 7.2"
 gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
+gem "pg"
 
 # Use the Puma web server [https://github.com/puma/puma]
-gem "puma", "~> 6.4.0"
+gem "puma"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-gem "redis", "~> 4.0"
+gem "redis"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -37,21 +37,23 @@ gem "bootsnap", require: false
 gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-gem "image_processing", "~> 1.2"
+gem "image_processing"
 
 # Бэкенд
 gem 'devise' # Flexible authentication solution for Rails with Warden [https://github.com/heartcombo/devise]
 gem 'wicked' # Use wicked to turn your controller into a wizard [https://github.com/zombocom/wicked]
-gem 'rails-i18n', '~> 7.0.0' # Поддержка i18n
+gem 'rails-i18n' # Поддержка i18n
 
 # Фронтенд
 gem 'simple_form' # Удобный конструктор создания формы
+gem 'simple_form-tailwind'
+
 gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "stimulus-rails" # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "tailwindcss-rails" # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
 gem "inline_svg" # Embed SVG documents in your Rails views and style them with CSS [https://github.com/jamesmartin/inline_svg]
 gem "view_component" # Build reusable, testable & encapsulable UI components from Ruby classes [https://github.com/viewcomponent/view_component]
-gem "jsbundling-rails", "~> 1.3"
+gem "jsbundling-rails"
 
  group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
