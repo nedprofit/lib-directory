@@ -6,7 +6,9 @@ module.exports = {
     './app/helpers/**/*.rb',
     './app/javascript/**/*.js',
     './app/views/**/*.{erb,haml,html,slim}',
-    './app/components/**/*'
+    './app/assets/stylesheets/**/*.{css,scss}',
+    './app/components/**/*',
+    './config/initializers/**/*',
   ],
   theme: {
     extend: {
@@ -16,9 +18,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/aspect-ratio'),
-    require('@tailwindcss/typography'),
     require("daisyui"),
   ]
 }
