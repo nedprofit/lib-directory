@@ -65,8 +65,6 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
   gem "rubocop-rspec", require: false
   gem "rubocop-rspec_rails", require: false
-  gem "simplecov", require: false
-  gem "simplecov-cobertura"
   gem "actioncable"
   gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "listen"
@@ -85,6 +83,10 @@ group :test do
   gem "faker"
   gem "factory_bot_rails"
   gem "cucumber-rails", require: false
+  gem 'database_cleaner-active_record'
+  gem "simplecov", require: false
+  gem "simplecov-cobertura"
   gem "rspec-rails"
   gem "rspec-collection_matchers"
+  gem 'webmock'
 end
