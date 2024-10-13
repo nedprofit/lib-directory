@@ -1,35 +1,10 @@
 <h1>Добавить новую книгу</h1>
 
-<%= form_with(model: @book, local: true) do |form| %>
-  <% if @book.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@book.errors.count, "ошибка") %> произошла:</h2>
-      <ul>
-        <% @book.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= simple_form_for @book do |form| %>
+  <%= form.input :title %>
+  <%= form.input :poster %>
+  <%= form.input :author_id %>
+  <%= form.input :description %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <%= form.file_field :poster %>
-
-  <div class="field">
-    <%= form.label :author_id, "Author" %>
-    <%= form.collection_select :author_id, @authors, :id, :name, prompt: "Выберите автора" %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit "Создать книгу" %>
-  </div>
+  <%= form.submit "Создать книгу" %>
 <% end %>

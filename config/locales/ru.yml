@@ -451,3 +451,5 @@ ru:
   label_account: "Аккаунт"
   label_change_username: "Изменить никнейм"
   label_destroy_account: "Удалить аккаунт"
+  app:
+    name: "Директория книг"

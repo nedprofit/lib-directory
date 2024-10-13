@@ -75,6 +75,7 @@ group :development do
   gem "web-console"
   gem "rack-mini-profiler" # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   gem "ostruct"
+  gem "hotwire-livereload"
 end
 
 group :test do
@@ -83,10 +84,10 @@ group :test do
   gem "faker"
   gem "factory_bot_rails"
   gem "cucumber-rails", require: false
-  gem 'database_cleaner-active_record'
+  gem "database_cleaner-active_record"
   gem "simplecov", require: false
   gem "simplecov-cobertura"
   gem "rspec-rails"
   gem "rspec-collection_matchers"
-  gem 'webmock'
+  gem "webmock"
 end

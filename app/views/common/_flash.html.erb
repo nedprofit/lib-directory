@@ -1,3 +1,5 @@
-<% flash.each do |type, message| %>
-  <%= render "common/flash_body", type: type, message: message %>
-<% end %>
+<div class="space-y-4" id="flash">
+  <% flash.each do |type, message| %>
+    <%= render "common/flash_body", type: type, message: message %>
+  <% end %>
+</div>

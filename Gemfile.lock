@@ -161,6 +161,10 @@ GEM
     globalid (1.2.1)
       activesupport (>= 6.1)
     hashdiff (1.1.1)
+    hotwire-livereload (1.4.1)
+      actioncable (>= 6.0.0)
+      listen (>= 3.0.0)
+      railties (>= 6.0.0)
     htmlbeautifier (1.4.3)
     htmlentities (4.3.4)
     i18n (1.14.6)
@@ -478,6 +482,7 @@ DEPENDENCIES
   devise
   factory_bot_rails
   faker
+  hotwire-livereload
   image_processing
   inline_svg
   jbuilder

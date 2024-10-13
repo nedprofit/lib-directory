@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Книжная Директория</title>
+  <title><%= t('app.name') %></title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
-  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "application", "data-turbo-track": Rails.env.production? ? "reload" : "" %>
   <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
-
-  <%= render 'layouts/top_menu' %>
+  <%= hotwire_livereload_tags if Rails.env.development? %>
 </head>
 
 <body>
-  <div class="space-y-4" id="flash">
-    <%= render partial: "common/flash" %>
-  </div>
-
+<%= render partial: "common/flash" %>
+<%= render 'layouts/top_menu' %>
+<div>
   <%= yield %>
+</div>
 </body>
 </html>

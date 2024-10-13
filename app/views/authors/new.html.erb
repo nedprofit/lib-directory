@@ -1,28 +1,8 @@
-<h1>Добавить новую книгу</h1>
+<h1>Добавить нового автора</h1>
 
-<%= form_with model: @author do |form| %>
-  <% if @author.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@author.errors.count, "ошибка") %> произошла:</h2>
-      <ul>
-        <% @author.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= simple_form_for @author do |form| %>
+  <%= form.input :name %>
+  <%= form.input :description %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit "Создать автора" %>
-  </div>
+  <%= form.submit "Создать автора" %>
 <% end %>
