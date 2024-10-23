@@ -1,10 +1,16 @@
-<h1>Добавить новую книгу</h1>
+<div class="px-4 sm:px-6 sm:py-2 lg:px-12 lg:py-4">
+  <%= render HeaderComponent.new(title: t("books.new.title"), description: t("books.new.description")) do %>
+    <%= link_to t("books.index.title"), books_path, class: "button-primary" %>
+  <% end %>
 
-<%= simple_form_for @book do |form| %>
-  <%= form.input :title %>
-  <%= form.input :poster %>
-  <%= form.input :author_id %>
-  <%= form.input :description %>
+  <div class="mt-4">
+    <%= simple_form_for @book do |form| %>
+      <%= form.input :title %>
+      <%= form.input :poster %>
+      <%= form.input :author_id %>
+      <%= form.input :description %>
 
-  <%= form.submit "Создать книгу" %>
-<% end %>
+      <%= form.submit "Создать книгу", class: 'button-primary' %>
+    <% end %>
+  </div>
+</div>

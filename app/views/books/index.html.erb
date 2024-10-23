@@ -1,6 +1,6 @@
 <div class="px-4 sm:px-6 lg:px-12 lg:py-4 sm:py-2">
-  <%= render HeaderComponent.new(title: t('books.title'), description: t('books.description')) do %>
-    <%= link_to t('books.new'), new_book_path, class: "button-primary" %>
+  <%= render HeaderComponent.new(title: t('books.index.title'), description: t('books.index.description')) do %>
+    <%= link_to t('crud.new'), new_book_path, class: "button-primary" %>
   <% end %>
 
   <div class="mt-6 flex flex-wrap">

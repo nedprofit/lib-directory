@@ -451,5 +451,10 @@ ru:
   label_account: "Аккаунт"
   label_change_username: "Изменить никнейм"
   label_destroy_account: "Удалить аккаунт"
+
+  crud:
+    new: "Добавить"
+    edit: "Редактировать"
+    destroy: "Удалить"
   app:
     name: "Директория книг"

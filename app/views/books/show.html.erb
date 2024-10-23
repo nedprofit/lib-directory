@@ -1,0 +1,69 @@
+<div class="container mx-auto p-4">
+  <!-- Book Cover and Main Details -->
+  <div class="flex gap-8">
+    <div class="w-1/3">
+      <img src="https://cdn.litres.ru/pub/c/cover_415/69495367.webp" alt="Book Cover" class="rounded-lg">
+      <button class="w-full bg-green-600 text-white py-2 mt-4 rounded-lg">Хочу прочитать</button>
+      <button class="w-full border border-green-600 text-green-600 py-2 mt-2 rounded-lg">Shop this series</button>
+      <div class="flex justify-center mt-4">
+        <!-- Rating Stars -->
+        <div class="flex items-center space-x-1">
+          <svg class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="..."></path>
+          </svg>
+          <svg class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="..."></path>
+          </svg>
+          <svg class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="..."></path>
+          </svg>
+          <svg class="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="..."></path>
+          </svg>
+          <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+            <path d="..."></path>
+          </svg>
+        </div>
+        <span class="ml-2 text-lg font-semibold">4.47</span>
+      </div>
+    </div>
+
+    <!-- Book Information -->
+    <div class="w-2/3">
+      <h1 class="text-4xl font-bold"><%= @book.title %></h1>
+      <p class="text-lg text-gray-600">
+        <%= @book.author.name %></p>
+
+
+      <p class="mt-4">"Turning the envelope over, his hand trembling, Harry saw a purple wax seal bearing a coat of
+        arms; a lion, an eagle, a badger and a snake surrounding a large letter 'H.'"</p>
+      <%= turbo_mount("HexColorPicker", props: { color: "#034" }, class: "mb-5") %>
+
+      <!-- Genres/Tags -->
+      <div class="mt-4 flex space-x-2">
+        <button class="px-3 py-1 bg-gray-200 rounded-full">Fantasy</button>
+        <button class="px-3 py-1 bg-gray-200 rounded-full">Fiction</button>
+        <button class="px-3 py-1 bg-gray-200 rounded-full">Young Adult</button>
+        <button class="px-3 py-1 bg-gray-200 rounded-full">Magic</button>
+      </div>
+
+      <!-- Book Details -->
+      <div class="mt-6 text-gray-500">
+        <p>333 pages, Kindle Edition</p>
+        <p>First published June 26, 1997</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About the Author -->
+  <div class="mt-12">
+    <h2 class="text-2xl font-semibold">About the author</h2>
+    <div class="flex items-center mt-4">
+      <img src="https://via.placeholder.com/100x100" alt="Author Photo" class="rounded-full mr-4">
+      <div>
+        <p class="font-bold">J.K. Rowling</p>
+        <p class="text-gray-600">710 books - 228k followers</p>
+      </div>
+    </div>
+  </div>
+</div>
