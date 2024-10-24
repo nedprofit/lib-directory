@@ -1,17 +1,18 @@
 {
   "scripts": {
-    "build": "bun bun.config.js"
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --platform=node --format=esm --outdir=app/assets/builds --public-path=/assets"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.2.1",
-    "@fortawesome/free-regular-svg-icons": "^6.2.1",
-    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@editorjs/editorjs": "^2.30.6",
+    "@editorjs/paragraph": "^2.11.6",
+    "@editorjs/table": "^2.4.2",
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.4",
-    "@tiptap/core": "^2.5.4",
-    "@tiptap/pm": "^2.5.4",
-    "@tiptap/starter-kit": "^2.5.4",
-    "stimulus-textarea-autogrow": "^4.1.0"
+    "editorjs-header-with-anchor": "^2.6.0",
+    "esbuild": "^0.24.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "turbo-mount": "^0.3.3"
   },
   "devDependencies": {
     "daisyui": "^3.7.7"
