@@ -35,9 +35,7 @@ class BooksController < ApplicationController
   def update
     respond_to do |format|
       if @book.update(book_params)
-        format.html do
-          redirect_to @book, notice: "Книга была успешно обновлена."
-        end
+        format.html { redirect_to @book, notice: "Книга была успешно обновлена." }
         format.json { render :show, status: :ok, location: @book }
       else
         format.html { render :edit, status: :unprocessable_entity }
