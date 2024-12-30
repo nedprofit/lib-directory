@@ -6,8 +6,12 @@ module Users
     def new
       super do |_resource|
         if flash[:error].present?
-          turbo_stream.prepend "flash", partial: "layouts/flash",
-                                        locals: { type: :alert, message: flash[:error] }
+          turbo_stream.prepend "flash",
+                               partial: "layouts/flash",
+                               locals: {
+                                 type: :alert,
+                                 message: flash[:error]
+                               }
         end
       end
     end

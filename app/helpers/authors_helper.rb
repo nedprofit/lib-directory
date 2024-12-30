@@ -7,5 +7,6 @@ module AuthorsHelper
     @author = Author.find(params[:id])
   end
 
-  def new; end
+  def new
+  end
 end

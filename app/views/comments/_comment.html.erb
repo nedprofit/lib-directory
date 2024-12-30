@@ -1,12 +1,25 @@
 <div class="flex bg-white dark:bg-gray-800 min-w-full">
-  <div class="bg-white dark:bg-gray-800 text-black dark:text-gray-200 p-2 antialiased flex min-w-full">
+  <div
+    class="bg-white dark:bg-gray-800 text-black dark:text-gray-200 p-2 antialiased flex min-w-full"
+  >
     <%= image_tag comment.user.avatar, class: "rounded-full h-8 w-8 mr-2 mt-1" %>
     <div>
-      <div class="bg-gray-100 dark:bg-gray-700 rounded-3xl px-4 pt-2 pb-2.5 min-w-80">
-        <div class="font-semibold text-sm leading-relaxed"><%= comment.user.username %></div>
-        <div class="text-normal leading-snug md:leading-normal break-all"><%= comment.text %></div>
+      <div
+        class="bg-gray-100 dark:bg-gray-700 rounded-3xl px-4 pt-2 pb-2.5 min-w-80"
+      >
+        <div class="font-semibold text-sm leading-relaxed">
+          <%= comment.user.username %>
+        </div>
+        <div class="text-normal leading-snug md:leading-normal break-all">
+          <%= comment.text %>
+        </div>
       </div>
-      <div class="text-sm ml-4 mt-0.5 text-gray-500 dark:text-gray-400 tooltip tooltip-bottom" data-tip="<%= comment.created_at %>"><%= time_ago_in_words(comment.created_at) %></div>
+      <div
+        class="text-sm ml-4 mt-0.5 text-gray-500 dark:text-gray-400 tooltip tooltip-bottom"
+        data-tip="<%= comment.created_at %>"
+      >
+        <%= time_ago_in_words(comment.created_at) %>
+      </div>
     </div>
   </div>
 </div>

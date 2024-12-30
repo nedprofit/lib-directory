@@ -1,22 +1,53 @@
-<main class="relative flex flex-1 flex-col overflow-hidden px-4 py-8 sm:px-6 lg:px-8">
-  <img src="/img/beams-cover@95.jpg" alt="" class="absolute left-1/2 top-0 -ml-[47.5rem] w-[122.5rem] max-w-none">
-  <div class="absolute inset-0 text-slate-900/[0.07] [mask-image:linear-gradient(to_bottom_left,white,transparent,transparent)]">
-    <svg class="absolute inset-0 h-full w-full" xmlns="http://www.w3.org/2000/svg">
+<main
+  class="relative flex flex-1 flex-col overflow-hidden px-4 py-8 sm:px-6 lg:px-8"
+>
+  <img
+    src="/img/beams-cover@95.jpg"
+    alt=""
+    class="absolute left-1/2 top-0 -ml-[47.5rem] w-[122.5rem] max-w-none"
+  />
+  <div
+    class="absolute inset-0 text-slate-900/[0.07] [mask-image:linear-gradient(to_bottom_left,white,transparent,transparent)]"
+  >
+    <svg
+      class="absolute inset-0 h-full w-full"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <defs>
-        <pattern id="grid-bg" width="32" height="32" patternUnits="userSpaceOnUse" x="100%" patternTransform="translate(0 -1)">
+        <pattern
+          id="grid-bg"
+          width="32"
+          height="32"
+          patternUnits="userSpaceOnUse"
+          x="100%"
+          patternTransform="translate(0 -1)"
+        >
           <path d="M0 32V.5H32" fill="none" stroke="currentColor"></path>
         </pattern>
       </defs>
       <rect width="100%" height="100%" fill="url(#grid-bg)"></rect>
     </svg>
   </div>
-  <div class="relative flex flex-1 flex-col items-center justify-center pb-16 pt-12">
+  <div
+    class="relative flex flex-1 flex-col items-center justify-center pb-16 pt-12"
+  >
     <div class="flex items-center mx-auto mb-10">
       <%= image_tag "logo.png", class: "w-32 h-32 text-slate-900" %>
-      <h1 class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Директория книг</h1>
+      <h1
+        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+      >
+        Директория книг
+      </h1>
     </div>
 
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'w-full max-w-sm' }) do |f| %>
+    <%= simple_form_for(
+          resource,
+          as: resource_name,
+          url: session_path(resource_name),
+          html: {
+            class: "w-full max-w-sm",
+          },
+        ) do |f| %>
       <%= f.input :email %>
       <%= f.input :password %>
 
@@ -24,26 +55,38 @@
         <div class="flex items-center">
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
         </div>
-        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+        <%- if devise_mapping.recoverable? && controller_name != "passwords" &&
+                 controller_name != "registrations" %>
           <div class="text-sm mb-3 leading-6">
-            <%= link_to (t :label_forgot_password), new_password_path(resource_name), class: "font-semibold text-indigo-600 hover:text-indigo-500" %>
+            <%= link_to (t :label_forgot_password),
+                        new_password_path(resource_name),
+                        class: "font-semibold text-indigo-600 hover:text-indigo-500" %>
           </div>
         <% end %>
       </div>
 
-      <%= f.button :submit, (t :label_log_in), class: 'inline-flex justify-center rounded-lg text-sm font-semibold py-2.5 px-4 bg-slate-900 text-white hover:bg-slate-700 w-full' %>
+      <%= f.button :submit,
+                   (t :label_log_in),
+                   class:
+                     "inline-flex justify-center rounded-lg text-sm font-semibold py-2.5 px-4 bg-slate-900 text-white hover:bg-slate-700 w-full" %>
     <% end %>
   </div>
 
-  <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%- if devise_mapping.registerable? && controller_name != "registrations" %>
     <footer class="relative shrink-0">
-      <div class="space-y-4 text-sm text-gray-900 sm:flex sm:items-center sm:justify-center sm:space-x-4 sm:space-y-0">
-        <p class="text-center sm:text-left"><%= t :label_dont_have_an_account %></p>
+      <div
+        class="space-y-4 text-sm text-gray-900 sm:flex sm:items-center sm:justify-center sm:space-x-4 sm:space-y-0"
+      >
+        <p class="text-center sm:text-left">
+          <%= t :label_dont_have_an_account %>
+        </p>
         <%= link_to new_registration_path(resource_name),
-                    class: "inline-flex justify-center rounded-lg text-sm font-semibold py-2.5 px-4 text-slate-900 ring-1 ring-slate-900/10 hover:ring-slate-900/20" do %>
-
-          <span> <%= t :label_create_account %>
-            <span aria-hidden="true">→</span></span>
+                    class:
+                      "inline-flex justify-center rounded-lg text-sm font-semibold py-2.5 px-4 text-slate-900 ring-1 ring-slate-900/10 hover:ring-slate-900/20" do %>
+          <span>
+            <%= t :label_create_account %>
+            <span aria-hidden="true">→</span></span
+          >
         <% end %>
       </div>
     </footer>

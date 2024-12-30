@@ -9,7 +9,8 @@ class CommentsController < ApplicationController
       redirect_to @book, notice: "Комментарий был успешно добавлен."
     else
       error_message = @comment.errors.full_messages.join(", ")
-      redirect_to @book, alert: "Ошибка при добавлении комментария: #{error_message}"
+      redirect_to @book,
+                  alert: "Ошибка при добавлении комментария: #{error_message}"
     end
   end
 

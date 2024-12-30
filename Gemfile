@@ -77,6 +77,8 @@ group :development do
   gem "rack-mini-profiler" # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   gem "ostruct"
   gem "hotwire-livereload"
+  gem "prettier_print"
+  gem "syntax_tree"
 end
 
 group :test do

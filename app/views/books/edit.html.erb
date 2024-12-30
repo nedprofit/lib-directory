@@ -1,9 +1,15 @@
 <%= turbo_frame_tag "description" do %>
   <%= form_with model: @book do |form| %>
-    <p class="text mt-8 text-left"> <%= form.text_area :description, data: { controller: "textarea-autogrow" } %> </p>
-    <%= form.submit "Сохранить", class: "rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" %>
-    <%= link_to 'Обратно', book_path(@book), class: "rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" %>
+    <p class="text mt-8 text-left">
+      <%= form.text_area :description, data: { controller: "textarea-autogrow" } %>
+    </p>
+    <%= form.submit "Сохранить",
+                    class:
+                      "rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" %>
+    <%= link_to "Обратно",
+                book_path(@book),
+                class:
+                  "rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" %>
   <% end %>
-  <div id="editorjs" data-controller="editor" class="mt-4">
-  </div>
+  <div id="editorjs" data-controller="editor" class="mt-4"></div>
 <% end %>

@@ -3,7 +3,7 @@ en:
   activerecord:
     errors:
       messages:
-        record_invalid: 'Validation failed: %{errors}'
+        record_invalid: "Validation failed: %{errors}"
         restrict_dependent_destroy:
           has_one: Cannot delete record because a dependent %{record} exists
           has_many: Cannot delete record because dependent %{record} exist
@@ -34,7 +34,7 @@ en:
       password_change:
         subject: "Password Changed"
     omniauth_callbacks:
-      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+      failure: 'Could not authenticate you from %{kind} because "%{reason}".'
       success: "Successfully authenticated from %{kind} account."
     passwords:
       no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
@@ -61,57 +61,57 @@ en:
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
   date:
     abbr_day_names:
-    - Sun
-    - Mon
-    - Tue
-    - Wed
-    - Thu
-    - Fri
-    - Sat
+      - Sun
+      - Mon
+      - Tue
+      - Wed
+      - Thu
+      - Fri
+      - Sat
     abbr_month_names:
-    - 
-    - Jan
-    - Feb
-    - Mar
-    - Apr
-    - May
-    - Jun
-    - Jul
-    - Aug
-    - Sep
-    - Oct
-    - Nov
-    - Dec
+      -
+      - Jan
+      - Feb
+      - Mar
+      - Apr
+      - May
+      - Jun
+      - Jul
+      - Aug
+      - Sep
+      - Oct
+      - Nov
+      - Dec
     day_names:
-    - Sunday
-    - Monday
-    - Tuesday
-    - Wednesday
-    - Thursday
-    - Friday
-    - Saturday
+      - Sunday
+      - Monday
+      - Tuesday
+      - Wednesday
+      - Thursday
+      - Friday
+      - Saturday
     formats:
       default: "%Y-%m-%d"
       long: "%B %d, %Y"
       short: "%b %d"
     month_names:
-    - 
-    - January
-    - February
-    - March
-    - April
-    - May
-    - June
-    - July
-    - August
-    - September
-    - October
-    - November
-    - December
+      -
+      - January
+      - February
+      - March
+      - April
+      - May
+      - June
+      - July
+      - August
+      - September
+      - October
+      - November
+      - December
     order:
-    - :year
-    - :month
-    - :day
+      - :year
+      - :month
+      - :day
   datetime:
     distance_in_words:
       about_x_hours:
@@ -183,7 +183,7 @@ en:
       invalid: is invalid
       less_than: must be less than %{count}
       less_than_or_equal_to: must be less than or equal to %{count}
-      model_invalid: 'Validation failed: %{errors}'
+      model_invalid: "Validation failed: %{errors}"
       not_a_number: is not a number
       not_an_integer: must be an integer
       odd: must be odd
@@ -201,7 +201,7 @@ en:
         one: is the wrong length (should be %{count} character)
         other: is the wrong length (should be %{count} characters)
     template:
-      body: 'There were problems with the following fields:'
+      body: "There were problems with the following fields:"
       header:
         one: "%{count} error prohibited this %{model} from being saved"
         other: "%{count} errors prohibited this %{model} from being saved"
@@ -238,9 +238,9 @@ en:
           quadrillion: Quadrillion
           thousand: Thousand
           trillion: Trillion
-          unit: ''
+          unit: ""
       format:
-        delimiter: ''
+        delimiter: ""
         precision: 3
         significant: true
         strip_insignificant_zeros: true
@@ -258,11 +258,11 @@ en:
           tb: TB
     percentage:
       format:
-        delimiter: ''
+        delimiter: ""
         format: "%n%"
     precision:
       format:
-        delimiter: ''
+        delimiter: ""
   support:
     array:
       last_word_connector: ", and "
@@ -308,4 +308,3 @@ en:
   label_account: "Account"
   label_change_username: "Change username"
   label_destroy_account: "Destroy account"
-

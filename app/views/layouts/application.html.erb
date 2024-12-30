@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= t('app.name') %></title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <%= csrf_meta_tags %>
-  <%= csp_meta_tag %>
-  <%= vite_client_tag %>
-  <%= vite_javascript_tag 'application' %>
-</head>
+  <head>
+    <title><%= t("app.name") %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= vite_client_tag %>
+    <%= vite_javascript_tag "application" %>
+  </head>
 
-<body>
-<%= render partial: "common/flash" %>
-<%= render 'layouts/top_menu' %>
-<div>
-  <%= yield %>
-</div>
-</body>
+  <body>
+    <%= render partial: "common/flash" %>
+    <%= render "layouts/top_menu" %>
+    <div><%= yield %></div>
+  </body>
 </html>

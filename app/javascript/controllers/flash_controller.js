@@ -1,10 +1,9 @@
-import {Controller} from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
-    connect() {
-    }
+  connect() {}
 
-    dismiss() {
-        this.element.remove()
-    }
+  dismiss() {
+    this.element.remove();
+  }
 }

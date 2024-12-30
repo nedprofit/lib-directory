@@ -29,12 +29,15 @@ class BooksController < ApplicationController
     @comment = Comment.new
   end
 
-  def edit; end
+  def edit
+  end
 
   def update
     respond_to do |format|
       if @book.update(book_params)
-        format.html { redirect_to @book, notice: "Книга была успешно обновлена." }
+        format.html do
+          redirect_to @book, notice: "Книга была успешно обновлена."
+        end
         format.json { render :show, status: :ok, location: @book }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -46,7 +49,9 @@ class BooksController < ApplicationController
   def destroy
     @book.destroy
     respond_to do |format|
-      format.html { redirect_to books_url, notice: "Книга была успешно удалена." }
+      format.html do
+        redirect_to books_url, notice: "Книга была успешно удалена."
+      end
       format.json { head :no_content }
     end
   end

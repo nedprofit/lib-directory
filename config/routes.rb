@@ -2,13 +2,14 @@
 
 Rails.application.routes.draw do
   get "libraries/create"
-  devise_for :users, controllers: {
-    sessions: "users/sessions",
-    registrations: "users/registrations"
-  }
+  devise_for :users,
+             controllers: {
+               sessions: "users/sessions",
+               registrations: "users/registrations"
+             }
 
   resources :books do
-    resources :comments, only: [ :create ]
+    resources :comments, only: [:create]
     post "add_to_library", to: "libraries#create"
   end
 

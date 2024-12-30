@@ -1,13 +1,16 @@
 # Module provide methods for downloads testing
 module DownloadHelpers
   TIMEOUT = 10
-  DOWNLOAD_PATH = Pathname.new(ENV.fetch('DOWNLOAD_PATH', Rails.root.join('tmp', 'downloads')))
+  DOWNLOAD_PATH =
+    Pathname.new(
+      ENV.fetch("DOWNLOAD_PATH", Rails.root.join("tmp", "downloads"))
+    )
 
   def downloads
-    Dir[DOWNLOAD_PATH.join('*')]
+    Dir[DOWNLOAD_PATH.join("*")]
   end
 
-  def find_downloaded_file(file = '.*')
+  def find_downloaded_file(file = ".*")
     downloads.grep(/#{file}$/).first
   end
 
@@ -37,5 +40,9 @@ module DownloadHelpers
     FileUtils.rm_f(downloads)
   end
 
-  module_function :clear_downloads, :find_downloaded_file, :wait_for_download, :downloads, :downloaded?
+  module_function :clear_downloads,
+                  :find_downloaded_file,
+                  :wait_for_download,
+                  :downloads,
+                  :downloaded?
 end

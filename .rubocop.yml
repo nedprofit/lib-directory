@@ -11,11 +11,11 @@ require:
 AllCops:
   NewCops: enable
   Exclude:
-    - 'bin/**/*'
-    - 'db/schema.rb'
-    - 'config/**/*'
-    - 'node_modules/**/*'
-    - 'vendor/**/*'
+    - "bin/**/*"
+    - "db/schema.rb"
+    - "config/**/*"
+    - "node_modules/**/*"
+    - "vendor/**/*"
 Style/Documentation: # Checks for missing top-level documentation of classes and modules
   Enabled: false
 Rails/FilePath: # This cop is used to identify usages of file path joining process
@@ -24,7 +24,7 @@ RSpec/MessageSpies: # Checks that message expectations are set using spies
   Enabled: false
 RSpec/ExampleLength: # Checks for long examples.
   Exclude:
-    - 'spec/features/*'
+    - "spec/features/*"
 Layout/LineLength:
   AllowedPatterns:
     - !ruby/regexp /\A *# /
@@ -36,12 +36,12 @@ FactoryBot/ExcessiveCreateList:
   MaxAmount: 12
 Naming/AsciiIdentifiers:
   Exclude:
-    - 'features/**/*'
+    - "features/**/*"
 Metrics/AbcSize:
   Exclude:
-    - 'db/migrate/**/*'
+    - "db/migrate/**/*"
 Metrics/MethodLength:
   Exclude:
-    - 'db/migrate/**/*'
+    - "db/migrate/**/*"
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never

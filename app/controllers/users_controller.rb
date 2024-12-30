@@ -2,9 +2,11 @@ class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update]
   before_action :authenticate_user!
 
-  def show; end
+  def show
+  end
 
-  def edit; end
+  def edit
+  end
 
   # rubocop:disable Metrics/MethodLength
   # rubocop:disable Metrics/AbcSize
@@ -30,7 +32,8 @@ class UsersController < ApplicationController
     if @user.destroy
       redirect_to root_path, notice: "Ваш аккаунт успешно удален."
     else
-      redirect_to settings_account_path, alert: "Произошла ошибка при удалении аккаунта."
+      redirect_to settings_account_path,
+                  alert: "Произошла ошибка при удалении аккаунта."
     end
   end
 
@@ -41,7 +44,15 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :username, :avatar, :background,
-                                 :first_name, :last_name)
+    params.require(:user).permit(
+      :email,
+      :password,
+      :password_confirmation,
+      :username,
+      :avatar,
+      :background,
+      :first_name,
+      :last_name
+    )
   end
 end
