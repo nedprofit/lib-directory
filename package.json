@@ -25,6 +25,7 @@
     "@editorjs/warning": "^1.4.1",
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.12",
+    "chokidar": "^4.0.3",
     "editorjs-header-with-anchor": "^2.6.0",
     "esbuild": "^0.24.2",
     "esbuild-rails": "^1.0.7",
