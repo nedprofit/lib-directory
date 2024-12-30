@@ -69,6 +69,8 @@ group :development, :test do
   gem "debug", platforms: %i[mri mingw x64_mingw]
   gem "listen"
   gem "lookbook"
+  gem "bundler-audit"
+  gem "brakeman"
 end
 
 group :development do
