@@ -43,11 +43,11 @@ Capybara.register_driver :chrome_headless do |app|
 end
 # Select javascript driver
 javascript_driver = case ENV.fetch('CAPYBARA_DRIVER', nil)
-                    when /chrome_headless_remote/
+when /chrome_headless_remote/
                       :chrome_headless_remote
-                    else
+else
                       :chrome_headless
-                    end
+end
 # Setup Capybara
 Capybara.javascript_driver = javascript_driver
 # Setup rspec

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update]
   before_action :authenticate_user!
@@ -8,6 +6,8 @@ class UsersController < ApplicationController
 
   def edit; end
 
+  # rubocop:disable Metrics/MethodLength
+  # rubocop:disable Metrics/AbcSize
   def update
     if @user.update(user_params)
       flash.now[:success] = t(:label_update_settings_suсcess)
@@ -23,6 +23,8 @@ class UsersController < ApplicationController
     end
   end
 
+  # rubocop:enable Metrics/MethodLength
+  # rubocop:enable Metrics/AbcSize
   def destroy
     @user = User.find(current_user.id)
     if @user.destroy

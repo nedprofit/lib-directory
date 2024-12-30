@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -57,7 +55,7 @@ gem "tailwindcss-rails" # Use Tailwind CSS [https://github.com/rails/tailwindcss
 gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "view_component" # Build reusable, testable & encapsulable UI components from Ruby classes [https://github.com/viewcomponent/view_component]
 gem "turbo-mount"
-gem 'render_editorjs'
+gem "render_editorjs"
 
 group :development, :test do
   gem "rubocop", require: false

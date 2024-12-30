@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class LibrariesController < ApplicationController
   before_action :set_book, only: [ :create ]
 

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module AuthorsHelper
   def index
     @authors = Author.all

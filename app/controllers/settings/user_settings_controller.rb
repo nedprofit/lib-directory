@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Settings
   class UserSettingsController < ApplicationController
     def show_profile
