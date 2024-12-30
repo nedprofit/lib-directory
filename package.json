@@ -31,7 +31,7 @@
     "react-dom": "^18.3.1",
     "@4az/prettier-plugin-html-erb": "^0.0.6",
     "@prettier/plugin-ruby": "^4.0.4",
-    "prettier": "^3.4.1",
+    "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "stimulus-vite-helpers": "^3.1.0",
     "turbo-mount": "^0.3.3",

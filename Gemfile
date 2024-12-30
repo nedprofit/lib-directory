@@ -70,6 +70,8 @@ group :development, :test do
   gem "lookbook"
   gem "bundler-audit"
   gem "brakeman"
+  gem "simplecov", require: false
+  gem "simplecov-cobertura"
 end
 
 group :development do
@@ -88,8 +90,6 @@ group :test do
   gem "factory_bot_rails"
   gem "cucumber-rails", require: false
   gem "database_cleaner-active_record"
-  gem "simplecov", require: false
-  gem "simplecov-cobertura"
   gem "rspec-rails"
   gem "rspec-collection_matchers"
   gem "webmock"
