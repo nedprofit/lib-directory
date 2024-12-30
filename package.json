@@ -3,23 +3,41 @@
     "build": "node esbuild.config.js"
   },
   "dependencies": {
-    "@editorjs/editorjs": "^2.30.6",
-    "@editorjs/paragraph": "^2.11.6",
-    "@editorjs/table": "^2.4.2",
+    "@alkhipce/editorjs-aitext": "^1.2.0",
+    "@calumk/editorjs-columns": "^0.3.2",
+    "@calumk/editorjs-paragraph-linebreakable": "^1.0.0",
+    "@editorjs/checklist": "^1.6.0",
+    "@editorjs/code": "^2.9.3",
+    "@editorjs/delimiter": "^1.4.2",
+    "@editorjs/editorjs": "^2.30.7",
+    "@editorjs/embed": "^2.7.6",
+    "@editorjs/header": "^2.8.8",
+    "@editorjs/image": "^2.10.1",
+    "@editorjs/inline-code": "^1.5.1",
+    "@editorjs/link": "^2.6.2",
+    "@editorjs/list": "^1.10.0",
+    "@editorjs/marker": "^1.4.0",
+    "@editorjs/paragraph": "^2.11.7",
+    "@editorjs/quote": "^2.7.6",
+    "@editorjs/raw": "^2.5.1",
+    "@editorjs/simple-image": "^1.6.0",
+    "@editorjs/table": "^2.4.3",
+    "@editorjs/warning": "^1.4.1",
     "@hotwired/stimulus": "^3.2.2",
-    "@hotwired/turbo-rails": "^8.0.4",
+    "@hotwired/turbo-rails": "^8.0.12",
     "editorjs-header-with-anchor": "^2.6.0",
+    "esbuild": "^0.24.2",
     "esbuild-rails": "^1.0.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "turbo-mount": "^0.3.3"
   },
   "devDependencies": {
-    "daisyui": "^3.7.7"
+    "daisyui": "^4.12.23"
   },
   "name": "lib.directory",
   "type": "module",
   "peerDependencies": {
-    "typescript": "^5.0.0"
+    "typescript": "^5.7.2"
   }
 }
