@@ -1,8 +1,8 @@
 import plugin, {TurboMount} from "turbo-mount/react";
-import {registerComponents} from "turbo-mount/registerComponents/esbuild";
-import controllers from "./controllers/**/*_controller.js";
-import components from "./components/**/*.jsx";
+import {registerComponents} from "turbo-mount/registerComponents/vite";
+
+const controllers = import.meta.glob("./**/*_controller.js", {eager: true});
+const components = import.meta.glob("/components/**/*.jsx", {eager: true});
 
 const turboMount = new TurboMount();
-
 registerComponents({plugin, turboMount, components, controllers});
