@@ -33,7 +33,9 @@
     "turbo-mount": "^0.3.3"
   },
   "devDependencies": {
-    "daisyui": "^4.12.23"
+    "daisyui": "^4.12.23",
+    "vite": "^5.4.11",
+    "vite-plugin-ruby": "^5.1.1"
   },
   "name": "lib.directory",
   "type": "module",

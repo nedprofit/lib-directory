@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.4.1"
+ruby "3.3.5"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails"
@@ -47,6 +47,7 @@ gem "wicked" # Use wicked to turn your controller into a wizard [https://github.
 # Фронтенд
 gem "simple_form" # Удобный конструктор создания формы
 gem "simple_form-tailwind"
+gem "vite_rails"
 
 gem "inline_svg" # Embed SVG documents in your Rails views and style them with CSS [https://github.com/jamesmartin/inline_svg]
 gem "jsbundling-rails"
