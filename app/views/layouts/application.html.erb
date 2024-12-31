@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= t("app.name") %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= vite_client_tag %>
-    <%= vite_javascript_tag "application" %>
-  </head>
+<html data-theme="light" class="text-xs md:text-sm lg:text-base">
+<head>
+  <title><%= t("app.name") %></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= vite_client_tag %>
+  <%= vite_javascript_tag "application" %>
+</head>
 
-  <body>
-    <%= render partial: "common/flash" %>
-    <%= render "layouts/top_menu" %>
-    <div><%= yield %></div>
-  </body>
+<body>
+<%= render partial: "common/flash" %>
+  <div style="--sidebar-width:16rem;--sidebar-width-icon:3rem" class="group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar">
+    <%= render partial: 'layouts/sidebar/sidemenu' %>
+    <%= render partial: 'layouts/main' %>
+    <div class="absolute flex w-full flex-col overflow-y-auto overflow-x-hidden pl-4 sidemenu_shadow"></div>
+  </div>
+</body>
 </html>

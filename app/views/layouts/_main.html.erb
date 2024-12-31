@@ -1,0 +1,13 @@
+<div
+  class="hidden fixed left-0 w-full h-full transition-opacity duration-300 mt-header z-[5]"
+></div>
+<div
+  class="relative flex min-h-svh flex-1 flex-col peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow"
+>
+  <%= render partial: 'layouts/header/header', locals: { user: current_user } %>
+  <div class="flex flex-1 flex-col gap-4 p-4 pt-0">
+    <%= yield %>
+  </div>
+  <%# Невидимая кнопка для работы расфокуса DropdownComponent по ESC %>
+  <button type="button" id="dropdown-close-helper" class="size-0"></button>
+</div>

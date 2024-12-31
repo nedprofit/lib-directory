@@ -1,11 +1,17 @@
 class ApplicationController < ActionController::Base
+  include Pundit::Authorization
+
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :set_locale
+  before_action :set_locale, :set_menu
 
   private
 
   def set_locale
     I18n.locale = :ru
+  end
+
+  def set_menu
+    @menu = MenuService::Menu.new(current_user, controller_name, action_name)
   end
 
   protected

@@ -1,0 +1,77 @@
+<div
+  class="z-50 hidden group peer text-sidebar-foreground md:block"
+  data-state="expanded"
+  data-collapsible=""
+  data-variant="sidebar"
+  data-side="left"
+>
+  <div
+    class="duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear group-data-[collapsible=offcanvas]:w-0 group-data-[side=right]:rotate-180 group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
+  ></div>
+  <div
+    class="duration-200 bg-neutral-50 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] ease-linear md:flex left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)] group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l"
+  >
+    <div
+      data-sidebar="sidebar"
+      class="flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-sidebar-border group-data-[variant=floating]:shadow"
+    >
+      <%# Блок брендирования приложения %>
+      <%= render partial: "layouts/sidebar/header" %>
+
+      <%# Блок с группами основных объектов приложения %>
+      <%= render partial: "layouts/sidebar/content" %>
+
+      <div data-sidebar="footer" class="flex flex-col gap-2 p-2">
+        <ul data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-1">
+          <li data-sidebar="menu-item" class="relative group/menu-item">
+            <button
+              data-sidebar="menu-button"
+              data-size="lg"
+              data-active="false"
+              class="peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left outline-none ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:!size-8 [&amp;>span:last-child]:truncate [&amp;>svg]:size-4 [&amp;>svg]:shrink-0 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground h-12 text-sm group-data-[collapsible=icon]:!p-0 data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
+              type="button"
+              id="radix-:Rspuuuuuu6ja:"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              data-state="closed"
+            >
+              <span
+                class="relative flex h-8 w-8 shrink-0 overflow-hidden rounded-lg"
+              ><img
+                class="aspect-square h-full w-full"
+                alt="shadcn"
+                src="https://ui.shadcn.com/avatars/shadcn.jpg"
+                /></span>
+              <div class="grid flex-1 text-left text-sm leading-tight">
+                <span class="truncate font-semibold">Anonim User</span
+                ><span class="truncate text-xs">m@example.com</span>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="ml-auto lucide lucide-chevrons-up-down size-4"
+              >
+                <path d="m7 15 5 5 5-5"></path>
+                <path d="m7 9 5-5 5 5"></path>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <button
+        data-sidebar="rail"
+        aria-label="Toggle Sidebar"
+        tabindex="-1"
+        title="Toggle Sidebar"
+        class="absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex [[data-side=left]_&amp;]:cursor-w-resize [[data-side=right]_&amp;]:cursor-e-resize [[data-side=left][data-state=collapsed]_&amp;]:cursor-e-resize [[data-side=right][data-state=collapsed]_&amp;]:cursor-w-resize group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar [[data-side=left][data-collapsible=offcanvas]_&amp;]:-right-2 [[data-side=right][data-collapsible=offcanvas]_&amp;]:-left-2"
+      ></button>
+    </div>
+  </div>
+</div>

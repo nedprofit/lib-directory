@@ -43,6 +43,7 @@ gem "image_processing"
 gem "devise" # Flexible authentication solution for Rails with Warden [https://github.com/heartcombo/devise]
 gem "rails-i18n" # Поддержка i18n
 gem "wicked" # Use wicked to turn your controller into a wizard [https://github.com/zombocom/wicked]
+gem "pundit" # To build a simple, robust and scalable authorization system
 
 # Фронтенд
 gem "simple_form" # Удобный конструктор создания формы
@@ -88,6 +89,7 @@ group :test do
   gem "selenium-webdriver"
   gem "faker"
   gem "factory_bot_rails"
+  gem "pundit-matchers"
   gem "cucumber-rails", require: false
   gem "database_cleaner-active_record"
   gem "rspec-rails"
