@@ -17,7 +17,6 @@ console.log(
 );
 
 import "../controllers";
-import "../turbo-mount";
 
 // Example: Load Rails libraries in Vite.
 //
